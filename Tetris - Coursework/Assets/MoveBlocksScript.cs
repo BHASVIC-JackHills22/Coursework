@@ -14,14 +14,22 @@ public class MoveBlocksScript : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        moveLeft();   
+        moveLeft();
+        autoMoveDown();
     }
 
     private void moveLeft()
     {
         if (Input.GetKeyDown(KeyCode.LeftArrow))
         {
-            rigidbody2D.velocity = Vector2.left;
+            transform.position += new Vector3(-1, 0, 0);
+            //rigidbody2D.velocity = Vector2.(0,2);
         }
+    }
+
+    private void autoMoveDown()
+    {
+        transform.position += new Vector3(0, -1, 0);
+        //rigidbody2D.velocity = Vector2.(0,2);
     }
 }
