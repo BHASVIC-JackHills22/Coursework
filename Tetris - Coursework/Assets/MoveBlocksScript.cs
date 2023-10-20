@@ -9,11 +9,12 @@ public class MoveBlocksScript : MonoBehaviour
     private bool leftCollider = false;
     private bool rightCollider = false;
     private bool bottomCollider = false;
+    public TetrisBlockSpawner spawn;
 
     // Start is called before the first frame update
     void Start()
     {
-
+        //spawn.GetComponent<TetrisBlockSpawner>().BlockSpawn();
     }
 
     // Update is called once per frame
@@ -74,6 +75,7 @@ public class MoveBlocksScript : MonoBehaviour
         if (collision.gameObject.tag == "BottomWall")
         {
             bottomCollider = true;
+            spawn.BlockSpawn();
         }
     }
 

@@ -2,7 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class TetrisBlock : MonoBehaviour
+public class TetrisBlockSpawner : MonoBehaviour
 {
     public GameObject JBlock;
 
@@ -15,6 +15,11 @@ public class TetrisBlock : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        Instantiate(JBlock, new Vector3(0, 0, 0), transform.rotation);
+        
+    }
+
+    public void BlockSpawn()
+    {
+        Instantiate(JBlock, new Vector3(1, 7, 0), transform.rotation);
     }
 }
