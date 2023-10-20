@@ -2,10 +2,8 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class TetrisBlock : MonoBehaviour
+public class SpawnBlocksScript : MonoBehaviour
 {
-    public GameObject JBlock;
-
     // Start is called before the first frame update
     void Start()
     {
@@ -15,6 +13,6 @@ public class TetrisBlock : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        Instantiate(JBlock, new Vector3(0, 0, 0), transform.rotation);
+        
     }
 }
