@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class TetrisBlockSpawner : MonoBehaviour
 {
-    public GameObject JBlock;
+    public GameObject BlockToSpawn;
 
     // Start is called before the first frame update
     void Start()
@@ -20,6 +20,6 @@ public class TetrisBlockSpawner : MonoBehaviour
 
     public void BlockSpawn()
     {
-        Instantiate(JBlock, new Vector3(1, 7, 0), transform.rotation);
+        Instantiate(BlockToSpawn, new Vector3(0, 7, 0), transform.rotation);
     }
 }

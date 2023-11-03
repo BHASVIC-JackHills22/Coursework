@@ -6,15 +6,16 @@ public class MoveBlocksScript : MonoBehaviour
 {
     public Rigidbody2D rigidbody2D;
     private float timeSinceMove;
-    private bool leftCollider = false;
-    private bool rightCollider = false;
-    private bool bottomCollider = false;
-    public TetrisBlockSpawner spawn;
+    public BlockCollisionScript collision;
+    private bool Leftmove;
+    private bool Rightmove;
+    private bool Bottommove;
+
 
     // Start is called before the first frame update
     void Start()
     {
-        //spawn.GetComponent<TetrisBlockSpawner>().BlockSpawn();
+       
     }
 
     // Update is called once per frame
@@ -28,7 +29,8 @@ public class MoveBlocksScript : MonoBehaviour
 
     private void moveLeft()
     {
-        if (Input.GetKeyDown(KeyCode.LeftArrow) && leftCollider == false && bottomCollider == false)
+        Leftmove = collision.LeftWallCollision();
+        if (Input.GetKeyDown(KeyCode.LeftArrow) && Leftmove == false)
         {
             transform.position += new Vector3(-1, 0, 0);
         }
@@ -36,7 +38,8 @@ public class MoveBlocksScript : MonoBehaviour
 
     private void moveRight()
     {
-        if (Input.GetKeyDown(KeyCode.RightArrow) && rightCollider == false && bottomCollider == false)
+        Rightmove = collision.RightWallCollision();
+        if (Input.GetKeyDown(KeyCode.RightArrow) && Rightmove == false)
         {
             transform.position += new Vector3(1, 0, 0);
         }
@@ -44,7 +47,8 @@ public class MoveBlocksScript : MonoBehaviour
 
     private void moveDown()
     {
-        if (Input.GetKeyDown(KeyCode.DownArrow) && bottomCollider == false)
+        Bottommove = collision.BottomWallCollision();
+        if (Input.GetKeyDown(KeyCode.DownArrow) && Bottommove == false)
         {
             transform.position += new Vector3(0, -1, 0);
         }
@@ -52,48 +56,11 @@ public class MoveBlocksScript : MonoBehaviour
 
     private void autoMoveDown()
     {
-        
-        if (Time.time - timeSinceMove >= 1.25 && bottomCollider == false)
+        Bottommove = collision.BottomWallCollision();
+        if (Time.time - timeSinceMove >= 1.25 && Bottommove == false)
         {
             transform.position += new Vector3(0, -1, 0);
             timeSinceMove = Time.time;
         }
-    }
-
-    private void OnCollisionEnter2D(Collision2D collision)
-    {
-        if(collision.gameObject.tag == "LeftWall")
-        {
-            leftCollider = true;
-        }
-
-        if (collision.gameObject.tag == "RightWall")
-        {
-            rightCollider = true;
-        }
-
-        if (collision.gameObject.tag == "BottomWall")
-        {
-            bottomCollider = true;
-            spawn.BlockSpawn();
-        }
-    }
-
-    private void OnCollisionExit2D(Collision2D collision)
-    {
-        if (collision.gameObject.tag == "LeftWall")
-        {
-            leftCollider = false;
-        }
-
-        else if (collision.gameObject.tag == "RightWall")
-        {
-            rightCollider = false;
-        }
-
-        else if (collision.gameObject.tag == "BottomWall")
-        {
-            bottomCollider = false;
-        }
-    }
+    } 
 }

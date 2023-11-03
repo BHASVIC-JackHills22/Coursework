@@ -140,7 +140,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2f2adb4b7831ed941b2828b1f58e7ba7, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  JBlock: {fileID: 117354615}
+  BlockToSpawn: {fileID: 0}
 --- !u!1 &433451598 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 4430993399093162706, guid: e3470014650a2459e9694002f72ca7f2, type: 3}
@@ -158,7 +158,20 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2f2adb4b7831ed941b2828b1f58e7ba7, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  JBlock: {fileID: 433451598}
+  BlockToSpawn: {fileID: 433451598}
+--- !u!114 &433451610
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 433451598}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6c48bd9407e7e4851bce646673a71d7a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  spawn: {fileID: 433451604}
 --- !u!1 &1208552638
 GameObject:
   m_ObjectHideFlags: 0
@@ -324,6 +337,11 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &1283593677 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 9011440611243448170, guid: e3470014650a2459e9694002f72ca7f2, type: 3}
+  m_PrefabInstance: {fileID: 8445711319965755699}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &1394839054
 GameObject:
   m_ObjectHideFlags: 0
@@ -600,13 +618,17 @@ PrefabInstance:
       propertyPath: m_Constraints
       value: 7
       objectReference: {fileID: 0}
+    - target: {fileID: 997739588519635717, guid: e3470014650a2459e9694002f72ca7f2, type: 3}
+      propertyPath: m_TagString
+      value: TetrisBlock
+      objectReference: {fileID: 0}
     - target: {fileID: 2293974948588347575, guid: e3470014650a2459e9694002f72ca7f2, type: 3}
       propertyPath: m_LocalPosition.x
-      value: -0.8
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 2293974948588347575, guid: e3470014650a2459e9694002f72ca7f2, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 0.25
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 2293974948588347575, guid: e3470014650a2459e9694002f72ca7f2, type: 3}
       propertyPath: m_LocalPosition.z
@@ -640,6 +662,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 4179188062574352215, guid: e3470014650a2459e9694002f72ca7f2, type: 3}
+      propertyPath: m_TagString
+      value: TetrisBlock
+      objectReference: {fileID: 0}
     - target: {fileID: 4322415966146826094, guid: e3470014650a2459e9694002f72ca7f2, type: 3}
       propertyPath: m_LocalPosition.x
       value: -2
@@ -668,34 +694,70 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 4430993399093162706, guid: e3470014650a2459e9694002f72ca7f2, type: 3}
+      propertyPath: m_TagString
+      value: TetrisBlock
+      objectReference: {fileID: 0}
     - target: {fileID: 5311753277863909097, guid: e3470014650a2459e9694002f72ca7f2, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 3
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5311753277863909097, guid: e3470014650a2459e9694002f72ca7f2, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 5458790439178342510, guid: e3470014650a2459e9694002f72ca7f2, type: 3}
       propertyPath: JBlock
       value: 
-      objectReference: {fileID: 117354615}
+      objectReference: {fileID: 1283593677}
     - target: {fileID: 6014204777466775497, guid: e3470014650a2459e9694002f72ca7f2, type: 3}
       propertyPath: m_IsActive
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6014204777466775497, guid: e3470014650a2459e9694002f72ca7f2, type: 3}
+      propertyPath: m_TagString
+      value: TetrisBlock
       objectReference: {fileID: 0}
     - target: {fileID: 6650818927191737902, guid: e3470014650a2459e9694002f72ca7f2, type: 3}
       propertyPath: m_IsActive
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 6650818927191737902, guid: e3470014650a2459e9694002f72ca7f2, type: 3}
+      propertyPath: m_TagString
+      value: TetrisBlock
+      objectReference: {fileID: 0}
     - target: {fileID: 7032103863502421789, guid: e3470014650a2459e9694002f72ca7f2, type: 3}
       propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7032103863502421789, guid: e3470014650a2459e9694002f72ca7f2, type: 3}
+      propertyPath: m_TagString
+      value: TetrisBlock
+      objectReference: {fileID: 0}
+    - target: {fileID: 7326353868968474404, guid: e3470014650a2459e9694002f72ca7f2, type: 3}
+      propertyPath: m_Offset.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7326353868968474404, guid: e3470014650a2459e9694002f72ca7f2, type: 3}
+      propertyPath: m_Offset.y
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 7411114350708668850, guid: e3470014650a2459e9694002f72ca7f2, type: 3}
       propertyPath: spawn
       value: 
       objectReference: {fileID: 117354621}
+    - target: {fileID: 7892137238897505150, guid: e3470014650a2459e9694002f72ca7f2, type: 3}
+      propertyPath: m_TagString
+      value: TetrisBlock
+      objectReference: {fileID: 0}
     - target: {fileID: 8362715502638654630, guid: e3470014650a2459e9694002f72ca7f2, type: 3}
       propertyPath: spawn
       value: 
       objectReference: {fileID: 433451604}
+    - target: {fileID: 8362715502638654630, guid: e3470014650a2459e9694002f72ca7f2, type: 3}
+      propertyPath: collision
+      value: 
+      objectReference: {fileID: 433451610}
     - target: {fileID: 9011440611243448170, guid: e3470014650a2459e9694002f72ca7f2, type: 3}
       propertyPath: m_Name
       value: TetrisBlocks
@@ -710,6 +772,9 @@ PrefabInstance:
     - targetCorrespondingSourceObject: {fileID: 4430993399093162706, guid: e3470014650a2459e9694002f72ca7f2, type: 3}
       insertIndex: -1
       addedObject: {fileID: 433451604}
+    - targetCorrespondingSourceObject: {fileID: 4430993399093162706, guid: e3470014650a2459e9694002f72ca7f2, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 433451610}
   m_SourcePrefab: {fileID: 100100000, guid: e3470014650a2459e9694002f72ca7f2, type: 3}
 --- !u!1660057539 &9223372036854775807
 SceneRoots:
