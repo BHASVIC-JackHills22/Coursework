@@ -172,6 +172,18 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   spawn: {fileID: 433451604}
+--- !u!156049354 &433451616
+Grid:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 433451598}
+  m_Enabled: 1
+  m_CellSize: {x: 1, y: 1, z: 1}
+  m_CellGap: {x: 0, y: 0, z: 0}
+  m_CellLayout: 0
+  m_CellSwizzle: 0
 --- !u!1 &1208552638
 GameObject:
   m_ObjectHideFlags: 0
@@ -614,13 +626,33 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 644968638931820824, guid: e3470014650a2459e9694002f72ca7f2, type: 3}
+      propertyPath: m_Offset.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 644968638931820824, guid: e3470014650a2459e9694002f72ca7f2, type: 3}
+      propertyPath: m_Offset.y
+      value: 0.5
+      objectReference: {fileID: 0}
     - target: {fileID: 833624338483455252, guid: e3470014650a2459e9694002f72ca7f2, type: 3}
       propertyPath: m_Constraints
       value: 7
       objectReference: {fileID: 0}
     - target: {fileID: 997739588519635717, guid: e3470014650a2459e9694002f72ca7f2, type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 997739588519635717, guid: e3470014650a2459e9694002f72ca7f2, type: 3}
       propertyPath: m_TagString
       value: TetrisBlock
+      objectReference: {fileID: 0}
+    - target: {fileID: 1308874060363873003, guid: e3470014650a2459e9694002f72ca7f2, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: -12.89
+      objectReference: {fileID: 0}
+    - target: {fileID: 1308874060363873003, guid: e3470014650a2459e9694002f72ca7f2, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 2.21
       objectReference: {fileID: 0}
     - target: {fileID: 2293974948588347575, guid: e3470014650a2459e9694002f72ca7f2, type: 3}
       propertyPath: m_LocalPosition.x
@@ -660,6 +692,10 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 2293974948588347575, guid: e3470014650a2459e9694002f72ca7f2, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3986471958456750106, guid: e3470014650a2459e9694002f72ca7f2, type: 3}
+      propertyPath: m_BodyType
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 4179188062574352215, guid: e3470014650a2459e9694002f72ca7f2, type: 3}
@@ -726,6 +762,14 @@ PrefabInstance:
       propertyPath: m_TagString
       value: TetrisBlock
       objectReference: {fileID: 0}
+    - target: {fileID: 6973043046526293083, guid: e3470014650a2459e9694002f72ca7f2, type: 3}
+      propertyPath: m_Mass
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 6973043046526293083, guid: e3470014650a2459e9694002f72ca7f2, type: 3}
+      propertyPath: m_BodyType
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 7032103863502421789, guid: e3470014650a2459e9694002f72ca7f2, type: 3}
       propertyPath: m_IsActive
       value: 0
@@ -740,6 +784,10 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7326353868968474404, guid: e3470014650a2459e9694002f72ca7f2, type: 3}
       propertyPath: m_Offset.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7326353868968474404, guid: e3470014650a2459e9694002f72ca7f2, type: 3}
+      propertyPath: m_IsTrigger
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 7411114350708668850, guid: e3470014650a2459e9694002f72ca7f2, type: 3}
@@ -775,6 +823,9 @@ PrefabInstance:
     - targetCorrespondingSourceObject: {fileID: 4430993399093162706, guid: e3470014650a2459e9694002f72ca7f2, type: 3}
       insertIndex: -1
       addedObject: {fileID: 433451610}
+    - targetCorrespondingSourceObject: {fileID: 4430993399093162706, guid: e3470014650a2459e9694002f72ca7f2, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 433451616}
   m_SourcePrefab: {fileID: 100100000, guid: e3470014650a2459e9694002f72ca7f2, type: 3}
 --- !u!1660057539 &9223372036854775807
 SceneRoots:

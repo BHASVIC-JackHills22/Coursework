@@ -8,7 +8,7 @@ onBoardingDoNotAskAgain = true
 showPackageIndexes = false
 showStatusBar = false
 scopes = {
-	"last_search.310DEAF1" = "sprite editor"
+	"last_search.310DEAF1" = "grid"
 	"OpenInspectorPreview.310DEAF1" = "0"
 	"currentGroup.310DEAF1" = "all"
 }
@@ -62,7 +62,10 @@ providers = {
 objectSelectors = {
 }
 recentSearches = [
+	"g"
+	"c"
 	"s"
+	"ed"
 	"e"
 	"p"
 ]
