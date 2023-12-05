@@ -15,7 +15,7 @@ C:/Users/jack.hills22/Documents/Coursework/Tetris - Coursework
 -logFile
 Logs/AssetImportWorker0.log
 -srvPort
-51228
+50291
 Successfully changed project path to: C:/Users/jack.hills22/Documents/Coursework/Tetris - Coursework
 C:/Users/jack.hills22/Documents/Coursework/Tetris - Coursework
 [UnityMemory] Configuration Parameters - Can be set up in boot.config
@@ -49,12 +49,12 @@ C:/Users/jack.hills22/Documents/Coursework/Tetris - Coursework
     "memorysetup-temp-allocator-size-cloud-worker=32768"
     "memorysetup-temp-allocator-size-gi-baking-worker=262144"
     "memorysetup-temp-allocator-size-gfx=262144"
-Player connection [14060] Host "[IP] 10.205.0.41 [Port] 0 [Flags] 2 [Guid] 2433985083 [EditorId] 2433985083 [Version] 1048832 [Id] WindowsEditor(7,R161-20581) [Debug] 1 [PackageName] WindowsEditor [ProjectName] Editor" joined multi-casting on [225.0.0.222:54997]...
+Player connection [24896] Host "[IP] 10.205.0.41 [Port] 0 [Flags] 2 [Guid] 3720551758 [EditorId] 3720551758 [Version] 1048832 [Id] WindowsEditor(7,R161-20581) [Debug] 1 [PackageName] WindowsEditor [ProjectName] Editor" joined multi-casting on [225.0.0.222:54997]...
 
-Player connection [14060] Host "[IP] 10.205.0.41 [Port] 0 [Flags] 2 [Guid] 2433985083 [EditorId] 2433985083 [Version] 1048832 [Id] WindowsEditor(7,R161-20581) [Debug] 1 [PackageName] WindowsEditor [ProjectName] Editor" joined alternative multi-casting on [225.0.0.222:34997]...
+Player connection [24896] Host "[IP] 10.205.0.41 [Port] 0 [Flags] 2 [Guid] 3720551758 [EditorId] 3720551758 [Version] 1048832 [Id] WindowsEditor(7,R161-20581) [Debug] 1 [PackageName] WindowsEditor [ProjectName] Editor" joined alternative multi-casting on [225.0.0.222:34997]...
 
 [Physics::Module] Initialized MultithreadedJobDispatcher with 5 workers.
-Refreshing native plugins compatible for Editor in 1551.69 ms, found 4 plugins.
+Refreshing native plugins compatible for Editor in 1640.83 ms, found 4 plugins.
 Preloading 0 native plugins for Editor in 0.00 ms.
 Initialize engine version: 2022.3.9f1 (ea401c316338)
 [Subsystems] Discovering subsystems at path C:/Program Files/Unity/Hub/Editor/2022.3.9f1/Editor/Data/Resources/UnitySubsystems
@@ -70,46 +70,46 @@ Initialize mono
 Mono path[0] = 'C:/Program Files/Unity/Hub/Editor/2022.3.9f1/Editor/Data/Managed'
 Mono path[1] = 'C:/Program Files/Unity/Hub/Editor/2022.3.9f1/Editor/Data/MonoBleedingEdge/lib/mono/unityjit-win32'
 Mono config path = 'C:/Program Files/Unity/Hub/Editor/2022.3.9f1/Editor/Data/MonoBleedingEdge/etc'
-Using monoOptions --debugger-agent=transport=dt_socket,embedding=1,server=y,suspend=n,address=127.0.0.1:56528
+Using monoOptions --debugger-agent=transport=dt_socket,embedding=1,server=y,suspend=n,address=127.0.0.1:56440
 Begin MonoManager ReloadAssembly
 Registering precompiled unity dll's ...
 Register platform support module: C:/Program Files/Unity/Hub/Editor/2022.3.9f1/Editor/Data/PlaybackEngines/WebGLSupport/UnityEditor.WebGL.Extensions.dll
 Register platform support module: C:/Program Files/Unity/Hub/Editor/2022.3.9f1/Editor/Data/PlaybackEngines/WindowsStandaloneSupport/UnityEditor.WindowsStandalone.Extensions.dll
-Registered in 0.221564 seconds.
-- Loaded All Assemblies, in  6.554 seconds
+Registered in 0.216010 seconds.
+- Loaded All Assemblies, in  6.855 seconds
 Native extension for WindowsStandalone target not found
 Native extension for WebGL target not found
 Mono: successfully reloaded assembly
-- Finished resetting the current domain, in  0.274 seconds
-Domain Reload Profiling: 6826ms
-	BeginReloadAssembly (4793ms)
+- Finished resetting the current domain, in  0.277 seconds
+Domain Reload Profiling: 7130ms
+	BeginReloadAssembly (5094ms)
 		ExecutionOrderSort (0ms)
 		DisableScriptedObjects (0ms)
 		BackupInstance (0ms)
 		ReleaseScriptingObjects (0ms)
 		CreateAndSetChildDomain (1ms)
-	RebuildCommonClasses (421ms)
-	RebuildNativeTypeToScriptingClass (11ms)
-	initialDomainReloadingComplete (277ms)
+	RebuildCommonClasses (424ms)
+	RebuildNativeTypeToScriptingClass (12ms)
+	initialDomainReloadingComplete (274ms)
 	LoadAllAssembliesAndSetupDomain (1049ms)
-		LoadAssemblies (4791ms)
+		LoadAssemblies (5092ms)
 		RebuildTransferFunctionScriptingTraits (0ms)
-		AnalyzeDomain (1047ms)
+		AnalyzeDomain (1046ms)
 			TypeCache.Refresh (1045ms)
-				TypeCache.ScanAssembly (793ms)
+				TypeCache.ScanAssembly (789ms)
 			ScanForSourceGeneratedMonoScriptInfo (0ms)
-			ResolveRequiredComponents (0ms)
-	FinalizeReload (275ms)
+			ResolveRequiredComponents (1ms)
+	FinalizeReload (277ms)
 		ReleaseScriptCaches (0ms)
 		RebuildScriptCaches (0ms)
-		SetupLoadedEditorAssemblies (214ms)
+		SetupLoadedEditorAssemblies (216ms)
 			LogAssemblyErrors (0ms)
 			InitializePlatformSupportModulesInManaged (12ms)
 			SetLoadedEditorAssemblies (6ms)
 			RefreshPlugins (0ms)
 			BeforeProcessingInitializeOnLoad (2ms)
-			ProcessInitializeOnLoadAttributes (135ms)
-			ProcessInitializeOnLoadMethodAttributes (58ms)
+			ProcessInitializeOnLoadAttributes (138ms)
+			ProcessInitializeOnLoadMethodAttributes (57ms)
 			AfterProcessingInitializeOnLoad (0ms)
 			EditorAssembliesLoaded (0ms)
 		ExecutionOrderSort2 (0ms)
@@ -117,8 +117,8 @@ Domain Reload Profiling: 6826ms
 ========================================================================
 Worker process is ready to serve import requests
 Begin MonoManager ReloadAssembly
-- Loaded All Assemblies, in  6.594 seconds
-Refreshing native plugins compatible for Editor in 5.14 ms, found 4 plugins.
+- Loaded All Assemblies, in  7.239 seconds
+Refreshing native plugins compatible for Editor in 5.34 ms, found 4 plugins.
 Native extension for WindowsStandalone target not found
 Native extension for WebGL target not found
 Package Manager log level set to [2]
@@ -126,9 +126,9 @@ Package Manager log level set to [2]
 [Package Manager] UpmClient::Send -- Unable to send message (not connected to UPM process).
 [Package Manager] Cannot connect to Unity Package Manager local server
 Mono: successfully reloaded assembly
-- Finished resetting the current domain, in  0.570 seconds
-Domain Reload Profiling: 7159ms
-	BeginReloadAssembly (161ms)
+- Finished resetting the current domain, in  0.676 seconds
+Domain Reload Profiling: 7898ms
+	BeginReloadAssembly (165ms)
 		ExecutionOrderSort (0ms)
 		DisableScriptedObjects (6ms)
 		BackupInstance (0ms)
@@ -136,68 +136,38 @@ Domain Reload Profiling: 7159ms
 		CreateAndSetChildDomain (22ms)
 	RebuildCommonClasses (34ms)
 	RebuildNativeTypeToScriptingClass (11ms)
-	initialDomainReloadingComplete (46ms)
-	LoadAllAssembliesAndSetupDomain (6337ms)
-		LoadAssemblies (6080ms)
+	initialDomainReloadingComplete (47ms)
+	LoadAllAssembliesAndSetupDomain (6964ms)
+		LoadAssemblies (6638ms)
 		RebuildTransferFunctionScriptingTraits (0ms)
-		AnalyzeDomain (353ms)
-			TypeCache.Refresh (329ms)
-				TypeCache.ScanAssembly (277ms)
-			ScanForSourceGeneratedMonoScriptInfo (19ms)
-			ResolveRequiredComponents (4ms)
-	FinalizeReload (570ms)
+		AnalyzeDomain (427ms)
+			TypeCache.Refresh (399ms)
+				TypeCache.ScanAssembly (336ms)
+			ScanForSourceGeneratedMonoScriptInfo (22ms)
+			ResolveRequiredComponents (5ms)
+	FinalizeReload (676ms)
 		ReleaseScriptCaches (0ms)
 		RebuildScriptCaches (0ms)
-		SetupLoadedEditorAssemblies (429ms)
+		SetupLoadedEditorAssemblies (510ms)
 			LogAssemblyErrors (0ms)
-			InitializePlatformSupportModulesInManaged (8ms)
-			SetLoadedEditorAssemblies (3ms)
+			InitializePlatformSupportModulesInManaged (9ms)
+			SetLoadedEditorAssemblies (4ms)
 			RefreshPlugins (0ms)
-			BeforeProcessingInitializeOnLoad (72ms)
-			ProcessInitializeOnLoadAttributes (306ms)
-			ProcessInitializeOnLoadMethodAttributes (31ms)
-			AfterProcessingInitializeOnLoad (8ms)
+			BeforeProcessingInitializeOnLoad (84ms)
+			ProcessInitializeOnLoadAttributes (366ms)
+			ProcessInitializeOnLoadMethodAttributes (36ms)
+			AfterProcessingInitializeOnLoad (10ms)
 			EditorAssembliesLoaded (0ms)
 		ExecutionOrderSort2 (0ms)
-		AwakeInstancesAfterBackupRestoration (7ms)
+		AwakeInstancesAfterBackupRestoration (8ms)
 Launched and connected shader compiler UnityShaderCompiler.exe after 0.05 seconds
-Refreshing native plugins compatible for Editor in 4.96 ms, found 4 plugins.
+Refreshing native plugins compatible for Editor in 6.20 ms, found 4 plugins.
 Preloading 0 native plugins for Editor in 0.00 ms.
 Unloading 4006 Unused Serialized files (Serialized files now loaded: 0)
-Unloading 69 unused Assets / (244.6 KB). Loaded Objects now: 4464.
-Memory consumption went from 136.8 MB to 136.5 MB.
-Total: 3.626000 ms (FindLiveObjects: 0.277900 ms CreateObjectMapping: 0.230700 ms MarkObjects: 2.940900 ms  DeleteObjects: 0.175800 ms)
+Unloading 69 unused Assets / (244.7 KB). Loaded Objects now: 4464.
+Memory consumption went from 136.6 MB to 136.3 MB.
+Total: 3.772200 ms (FindLiveObjects: 0.461500 ms CreateObjectMapping: 0.292300 ms MarkObjects: 2.826600 ms  DeleteObjects: 0.190800 ms)
 
-AssetImportParameters requested are different than current active one (requested -> active):
-  custom:container-demuxer-ogg: 62fdf1f143b41e24485cea50d1cbac27 -> 
-  custom:video-decoder-ogg-theora: a1e56fd34408186e4bbccfd4996cb3dc -> 
-  custom:framework-win-MediaFoundation: 216162199b28c13a410421893ffa2e32 -> 
-  custom:container-demuxer-webm: 4f35f7cbe854078d1ac9338744f61a02 -> 
-  custom:container-muxer-webm: aa71ff27fc2769a1b78a27578f13a17b -> 
-  custom:video-decoder-webm-vp8: 9c59270c3fd7afecdb556c50c9e8de78 -> 
-  custom:SearchIndexIgnoredProperties: e643bd26f0fe6173181afceb89e7c659 -> 
-  custom:AudioImporter_EditorPlatform: d09bf68614088b80899f8185d706f6e7 -> 
-  custom:video-encoder-webm-vp8: eb34c28f22e8b96e1ab97ce403110664 -> 
-  custom:audio-decoder-ogg-vorbis: bf7c407c2cedff20999df2af8eb42d56 -> 
-  custom:audio-encoder-webm-vorbis: bf7c407c2cedff20999df2af8eb42d56 -> 
-========================================================================
-Received Import Request.
-  Time since last request: 3993.388515 seconds.
-  path: Assets/MoveBlocksScript.cs
-  artifactKey: Guid(c7e9c93e905e9604aa9fd949842e7cbb) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/MoveBlocksScript.cs using Guid(c7e9c93e905e9604aa9fd949842e7cbb) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '3d3c4a432572ef85deb59448bb9193a8') in 0.002307 seconds
-Number of updated asset objects reloaded before import = 0
-Number of asset objects unloaded after import = 0
-========================================================================
-Received Prepare
-Refreshing native plugins compatible for Editor in 5.70 ms, found 4 plugins.
-Preloading 0 native plugins for Editor in 0.00 ms.
-Unloading 6 Unused Serialized files (Serialized files now loaded: 0)
-Unloading 7 unused Assets / (196.3 KB). Loaded Objects now: 4464.
-Memory consumption went from 73.6 MB to 73.4 MB.
-Total: 3.717300 ms (FindLiveObjects: 0.311900 ms CreateObjectMapping: 0.303500 ms MarkObjects: 2.950500 ms  DeleteObjects: 0.150400 ms)
-
-Prepare: number of updated asset objects reloaded= 0
 AssetImportParameters requested are different than current active one (requested -> active):
   custom:container-demuxer-ogg: 62fdf1f143b41e24485cea50d1cbac27 -> 
   custom:video-decoder-ogg-theora: a1e56fd34408186e4bbccfd4996cb3dc -> 
@@ -213,102 +183,25 @@ AssetImportParameters requested are different than current active one (requested
   custom:audio-encoder-webm-vorbis: bf7c407c2cedff20999df2af8eb42d56 -> 
 ========================================================================
 Received Import Request.
-  Time since last request: 54.639619 seconds.
-  path: Assets/TetrisBlocks.prefab
-  artifactKey: Guid(e3470014650a2459e9694002f72ca7f2) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/TetrisBlocks.prefab using Guid(e3470014650a2459e9694002f72ca7f2) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'ec163b8af0aa54238b7206c9e0f144d7') in 0.145035 seconds
+  Time since last request: 3899.636973 seconds.
+  path: Assets/Tetrominos/TBlock.png
+  artifactKey: Guid(0a1240b7fd4d5da4aa7994335d83dbae) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Tetrominos/TBlock.png using Guid(0a1240b7fd4d5da4aa7994335d83dbae) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '6c08de9f9eb67868ba7cd1ec76dd3c6a') in 0.112544 seconds
 Number of updated asset objects reloaded before import = 0
-Number of asset objects unloaded after import = 62
+Number of asset objects unloaded after import = 3
 ========================================================================
 Received Import Request.
-  Time since last request: 0.498148 seconds.
-  path: Assets/TetrisBlocks.prefab
-  artifactKey: Guid(e3470014650a2459e9694002f72ca7f2) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/TetrisBlocks.prefab using Guid(e3470014650a2459e9694002f72ca7f2) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '9ee6603070690a226a2edf3eb8a2f713') in 0.010270 seconds
+  Time since last request: 0.000049 seconds.
+  path: Assets/Tetrominos/SBlock.png
+  artifactKey: Guid(acee0fb64f89a944aae7bebf532a11ea) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Tetrominos/SBlock.png using Guid(acee0fb64f89a944aae7bebf532a11ea) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '6a80df7d10fe7453cbd839f9f1079908') in 0.035173 seconds
 Number of updated asset objects reloaded before import = 0
-Number of asset objects unloaded after import = 62
+Number of asset objects unloaded after import = 3
 ========================================================================
 Received Import Request.
-  Time since last request: 3.645114 seconds.
-  path: Assets/TetrisBlocks.prefab
-  artifactKey: Guid(e3470014650a2459e9694002f72ca7f2) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/TetrisBlocks.prefab using Guid(e3470014650a2459e9694002f72ca7f2) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'b4515df1ab162245c0d171e8241de108') in 0.012312 seconds
+  Time since last request: 0.000014 seconds.
+  path: Assets/Tetrominos/SquareBlock.png
+  artifactKey: Guid(3d66cf3dd75a0a24bbe8dcdbc0f61ba0) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Tetrominos/SquareBlock.png using Guid(3d66cf3dd75a0a24bbe8dcdbc0f61ba0) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'b29e847ea45aba9a70e7ea26665b1143') in 0.033306 seconds
 Number of updated asset objects reloaded before import = 0
-Number of asset objects unloaded after import = 62
-========================================================================
-Received Import Request.
-  Time since last request: 6.690508 seconds.
-  path: Assets/TetrisBlocks.prefab
-  artifactKey: Guid(e3470014650a2459e9694002f72ca7f2) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/TetrisBlocks.prefab using Guid(e3470014650a2459e9694002f72ca7f2) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '2c7cacbb572c574916798c28c3100c4f') in 0.011954 seconds
-Number of updated asset objects reloaded before import = 0
-Number of asset objects unloaded after import = 62
-========================================================================
-Received Import Request.
-  Time since last request: 2.828960 seconds.
-  path: Assets/TetrisBlocks.prefab
-  artifactKey: Guid(e3470014650a2459e9694002f72ca7f2) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/TetrisBlocks.prefab using Guid(e3470014650a2459e9694002f72ca7f2) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '63e38634f99b1466f4b862040da45a38') in 0.010338 seconds
-Number of updated asset objects reloaded before import = 0
-Number of asset objects unloaded after import = 62
-========================================================================
-Received Import Request.
-  Time since last request: 29.561445 seconds.
-  path: Assets/TetrisBlockSpawner.cs
-  artifactKey: Guid(2f2adb4b7831ed941b2828b1f58e7ba7) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/TetrisBlockSpawner.cs using Guid(2f2adb4b7831ed941b2828b1f58e7ba7) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '01a8bd439269ec7e8d14da47a3c7e67c') in 0.000797 seconds
-Number of updated asset objects reloaded before import = 0
-Number of asset objects unloaded after import = 0
-========================================================================
-Received Import Request.
-  Time since last request: 3.618567 seconds.
-  path: Assets/BlockCollisionScript.cs
-  artifactKey: Guid(6c48bd9407e7e4851bce646673a71d7a) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/BlockCollisionScript.cs using Guid(6c48bd9407e7e4851bce646673a71d7a) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '5bcbe327da02021d72130eb539f079e4') in 0.000491 seconds
-Number of updated asset objects reloaded before import = 0
-Number of asset objects unloaded after import = 0
-========================================================================
-Received Import Request.
-  Time since last request: 7.526368 seconds.
-  path: Assets/TetrisBlockSpawner.cs
-  artifactKey: Guid(2f2adb4b7831ed941b2828b1f58e7ba7) Importer(2089858483,0ecaa5967403d082aa24f35e1b516d23)
-Start importing Assets/TetrisBlockSpawner.cs using Guid(2f2adb4b7831ed941b2828b1f58e7ba7) Importer(2089858483,0ecaa5967403d082aa24f35e1b516d23) Generated GUIDs only implemented for interfaces!
- -> (artifact id: '2a96f921d1d23bfd4d8d0246d13fd4fa') in 0.091955 seconds
-Number of updated asset objects reloaded before import = 0
-Number of asset objects unloaded after import = 1
-========================================================================
-Received Import Request.
-  Time since last request: 0.000017 seconds.
-  path: Assets/Scenes/MainTetrisScene.unity
-  artifactKey: Guid(13a9e9c2538cbb44e864af5da82c9482) Importer(2089858483,0ecaa5967403d082aa24f35e1b516d23)
-Start importing Assets/Scenes/MainTetrisScene.unity using Guid(13a9e9c2538cbb44e864af5da82c9482) Importer(2089858483,0ecaa5967403d082aa24f35e1b516d23) Generated GUIDs only implemented for interfaces!
- -> (artifact id: '552e68f93e89dfcfc8fb765d746c2f15') in 0.014141 seconds
-Number of updated asset objects reloaded before import = 0
-Number of asset objects unloaded after import = 1
-========================================================================
-Received Import Request.
-  Time since last request: 0.000077 seconds.
-  path: Assets/TetrisBlocks.prefab
-  artifactKey: Guid(e3470014650a2459e9694002f72ca7f2) Importer(2089858483,0ecaa5967403d082aa24f35e1b516d23)
-Start importing Assets/TetrisBlocks.prefab using Guid(e3470014650a2459e9694002f72ca7f2) Importer(2089858483,0ecaa5967403d082aa24f35e1b516d23) Generated GUIDs only implemented for interfaces!
- -> (artifact id: '96f7e0702a1ab16493842a2a9dfefee0') in 0.029063 seconds
-Number of updated asset objects reloaded before import = 0
-Number of asset objects unloaded after import = 62
-========================================================================
-Received Import Request.
-  Time since last request: 0.000017 seconds.
-  path: Assets/BlockCollisionScript.cs
-  artifactKey: Guid(6c48bd9407e7e4851bce646673a71d7a) Importer(2089858483,0ecaa5967403d082aa24f35e1b516d23)
-Start importing Assets/BlockCollisionScript.cs using Guid(6c48bd9407e7e4851bce646673a71d7a) Importer(2089858483,0ecaa5967403d082aa24f35e1b516d23) Generated GUIDs only implemented for interfaces!
- -> (artifact id: 'a7fae7e694b8bf185e9d52558c733f66') in 0.013694 seconds
-Number of updated asset objects reloaded before import = 0
-Number of asset objects unloaded after import = 1
-========================================================================
-Received Import Request.
-  Time since last request: 0.000078 seconds.
-  path: Assets/MoveBlocksScript.cs
-  artifactKey: Guid(c7e9c93e905e9604aa9fd949842e7cbb) Importer(2089858483,0ecaa5967403d082aa24f35e1b516d23)
-Start importing Assets/MoveBlocksScript.cs using Guid(c7e9c93e905e9604aa9fd949842e7cbb) Importer(2089858483,0ecaa5967403d082aa24f35e1b516d23) Generated GUIDs only implemented for interfaces!
- -> (artifact id: '3b2febb65c3097fd8c250531b86f9a39') in 0.011659 seconds
-Number of updated asset objects reloaded before import = 0
-Number of asset objects unloaded after import = 1
+Number of asset objects unloaded after import = 3
