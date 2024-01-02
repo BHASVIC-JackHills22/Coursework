@@ -5,10 +5,12 @@ using UnityEngine.Experimental.GlobalIllumination;
 
 public class BlockMovement : MonoBehaviour
 {
+    public Vector3 rotationPoint;
     private float timeSinceMove;
     //public Rigidbody2D rigidbody2D;
     public static int height = 20;
     public static int width = 10;
+    private static Transform[,] grid = new Transform[width, height];
 
     // Start is called before the first frame update
     void Start()
@@ -22,6 +24,7 @@ public class BlockMovement : MonoBehaviour
         moveLeft();
         moveRight();
         moveDown();
+        rotation();
         autoMoveDown();
     }
 
@@ -61,8 +64,34 @@ public class BlockMovement : MonoBehaviour
         {
             transform.position += new Vector3(0, -1, 0);
             if (!ValidMove())
+            {
                 transform.position -= new Vector3(0, -1, 0);
+                addToGrid();
+                this.enabled = false;
+                FindObjectOfType<BlockSpawning>().NewTetromino();
+            }
             timeSinceMove = Time.time;
+        }
+    }
+
+    private void rotation()
+    {
+        if (Input.GetKeyDown(KeyCode.UpArrow))
+        {
+            transform.RotateAround(transform.TransformPoint(rotationPoint), new Vector3(0,0,1), 90);
+            if (!ValidMove())
+                transform.RotateAround(transform.TransformPoint(rotationPoint), new Vector3(0, 0, 1), -90);
+        }
+    }
+
+    void addToGrid()
+    {
+        foreach(Transform children in transform)
+        {
+            int roundedX = Mathf.RoundToInt(children.position.x);
+            int roundedY = Mathf.RoundToInt(children.position.y);
+
+            grid[roundedX, roundedY] = children;
         }
     }
 
@@ -77,6 +106,9 @@ public class BlockMovement : MonoBehaviour
             {
                 return false;
             }
+
+            if (grid[roundedX, roundedY] != null)
+                return false;
         }
         return true;
     }
