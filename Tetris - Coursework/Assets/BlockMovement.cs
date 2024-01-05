@@ -28,6 +28,7 @@ public class BlockMovement : MonoBehaviour
         autoMoveDown();
         checkForLines();
         hardDrop();
+        removeParent();
     }
 
     private void moveLeft()
@@ -157,14 +158,20 @@ public class BlockMovement : MonoBehaviour
     {
         for (int x = 0; x < width; x++)
         {
-            Destroy(grid[x, i].gameObject);
+            DestroyImmediate(grid[x, i].gameObject);
             grid[x, i] = null;
-        }
-        if (transform.hierarchyCount == 0)
-        {
-            Destroy(this.gameObject);
+            Debug.Log(transform.hierarchyCount);
         }
     }
+
+    private void removeParent()
+    {
+        if (transform.hierarchyCount <= 1)
+        {
+            Destroy(gameObject);
+        }
+    }
+    
 
     private void rowDown(int i)
     {
