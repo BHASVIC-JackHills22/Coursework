@@ -26,6 +26,8 @@ public class BlockMovement : MonoBehaviour
         moveDown();
         rotation();
         autoMoveDown();
+        checkForLines();
+        hardDrop();
     }
 
     private void moveLeft()
@@ -58,6 +60,20 @@ public class BlockMovement : MonoBehaviour
         }
     }
 
+    private void hardDrop()
+    {
+        if (Input.GetKeyDown(KeyCode.Space))
+        {
+            do
+            {
+                transform.position += new Vector3(0, -1, 0);
+            }
+            while (ValidMove());
+            if (!ValidMove())
+                transform.position -= new Vector3(0, -1, 0);
+        }
+    }
+
     private void autoMoveDown()
     {
         if (Time.time - timeSinceMove >= 1.25)
@@ -78,7 +94,7 @@ public class BlockMovement : MonoBehaviour
     {
         if (Input.GetKeyDown(KeyCode.UpArrow))
         {
-            transform.RotateAround(transform.TransformPoint(rotationPoint), new Vector3(0,0,1), 90);
+            transform.RotateAround(transform.TransformPoint(rotationPoint), new Vector3(0, 0, 1), 90);
             if (!ValidMove())
                 transform.RotateAround(transform.TransformPoint(rotationPoint), new Vector3(0, 0, 1), -90);
         }
@@ -86,7 +102,7 @@ public class BlockMovement : MonoBehaviour
 
     void addToGrid()
     {
-        foreach(Transform children in transform)
+        foreach (Transform children in transform)
         {
             int roundedX = Mathf.RoundToInt(children.position.x);
             int roundedY = Mathf.RoundToInt(children.position.y);
@@ -102,7 +118,7 @@ public class BlockMovement : MonoBehaviour
             int roundedX = Mathf.RoundToInt(children.position.x);
             int roundedY = Mathf.RoundToInt(children.position.y);
 
-            if(roundedX < 0 || roundedX >= width || roundedY < 0 || roundedY >= height)
+            if (roundedX < 0 || roundedX >= width || roundedY < 0 || roundedY >= height)
             {
                 return false;
             }
@@ -111,5 +127,58 @@ public class BlockMovement : MonoBehaviour
                 return false;
         }
         return true;
+    }
+
+    private void checkForLines()
+    {
+        for (int i = height - 1; i >= 0; i--)
+        {
+            if (hasLine(i))
+            {
+                removeLine(i);
+                rowDown(i);
+            }
+        }
+    }
+
+    bool hasLine(int i)
+    {
+        for (int x = 0; x < width; x++)
+        {
+            if (grid[x, i] == null)
+            {
+                return false;
+            }
+        }
+        return true;
+    }
+
+    private void removeLine(int i)
+    {
+        for (int x = 0; x < width; x++)
+        {
+            Destroy(grid[x, i].gameObject);
+            grid[x, i] = null;
+        }
+        if (transform.hierarchyCount == 0)
+        {
+            Destroy(this.gameObject);
+        }
+    }
+
+    private void rowDown(int i)
+    {
+        for (int y = i; y < height; y++)
+        {
+            for (int x = 0; x < width; x++)
+            {
+                if (grid[x, y] != null)
+                {
+                    grid[x, y - 1] = grid[x, y];
+                    grid[x, y] = null;
+                    grid[x, y - 1].transform.position -= new Vector3(0, 1, 0);
+                }
+            }
+        }
     }
 }
