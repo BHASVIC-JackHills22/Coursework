@@ -95,9 +95,9 @@ public class BlockMovement : MonoBehaviour
     {
         if (Input.GetKeyDown(KeyCode.UpArrow))
         {
-            transform.RotateAround(transform.TransformPoint(rotationPoint), new Vector3(0, 0, 1), 90);
+            transform.RotateAround(transform.TransformPoint(rotationPoint), new Vector3(0, 0, 1), -90);
             if (!ValidMove())
-                transform.RotateAround(transform.TransformPoint(rotationPoint), new Vector3(0, 0, 1), -90);
+                transform.RotateAround(transform.TransformPoint(rotationPoint), new Vector3(0, 0, 1), 90);
         }
     }
 
@@ -160,7 +160,7 @@ public class BlockMovement : MonoBehaviour
         {
             DestroyImmediate(grid[x, i].gameObject);
             grid[x, i] = null;
-            Debug.Log(transform.hierarchyCount);
+            //Debug.Log(transform.hierarchyCount);
         }
     }
 
@@ -169,6 +169,7 @@ public class BlockMovement : MonoBehaviour
         if (transform.hierarchyCount <= 1)
         {
             Destroy(gameObject);
+            Debug.Log("It should have worked??");
         }
     }
     
