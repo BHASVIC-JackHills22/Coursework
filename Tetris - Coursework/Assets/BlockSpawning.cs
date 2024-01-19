@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class BlockSpawning : MonoBehaviour
 {
@@ -21,5 +22,9 @@ public class BlockSpawning : MonoBehaviour
     public void NewTetromino()
     {
         Instantiate(Tetrominoes[Random.Range(0,Tetrominoes.Length)], transform.position, Quaternion.identity);
+        if (!FindObjectOfType<BlockMovement>().ValidMove())
+        {
+            SceneManager.LoadScene(SceneManager.GetActiveScene().name);
+        }
     }
 }

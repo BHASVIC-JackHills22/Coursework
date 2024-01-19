@@ -7,7 +7,13 @@ public class BlockMovement : MonoBehaviour
 {
     public Vector3 rotationPoint;
     private float timeSinceMove;
-    //public Rigidbody2D rigidbody2D;
+    private float fallTime = 1f;
+
+    private float keyDelay = 0.1f;  // 1f = 1 second
+    private float timePassedLeft = 0f;
+    private float timePassedRight = 0f;
+    private float timePassedDown = 0f;
+
     public static int height = 20;
     public static int width = 10;
     private static Transform[,] grid = new Transform[width, height];
@@ -33,31 +39,37 @@ public class BlockMovement : MonoBehaviour
 
     private void moveLeft()
     {
-        if (Input.GetKeyDown(KeyCode.LeftArrow))
+        timePassedLeft += Time.deltaTime;
+        if (Input.GetKey(KeyCode.A) && timePassedLeft >= keyDelay)
         {
-            transform.position += new Vector3(-1, 0, 0);
-            if (!ValidMove())
-                transform.position -= new Vector3(-1, 0, 0);
+                transform.position += new Vector3(-1, 0, 0);
+                if (!ValidMove())
+                    transform.position -= new Vector3(-1, 0, 0);
+            timePassedLeft = 0f;
         }
     }
 
     private void moveRight()
     {
-        if (Input.GetKeyDown(KeyCode.RightArrow))
+        timePassedRight += Time.deltaTime;
+        if (Input.GetKey(KeyCode.D) && timePassedRight >= keyDelay)
         {
             transform.position += new Vector3(1, 0, 0);
             if (!ValidMove())
                 transform.position -= new Vector3(1, 0, 0);
+            timePassedRight = 0f;
         }
     }
 
     private void moveDown()
     {
-        if (Input.GetKeyDown(KeyCode.DownArrow))
+        timePassedDown += Time.deltaTime;
+        if (Input.GetKey(KeyCode.S) && timePassedDown >= keyDelay)
         {
             transform.position += new Vector3(0, -1, 0);
             if (!ValidMove())
                 transform.position -= new Vector3(0, -1, 0);
+            timePassedDown = 0f;
         }
     }
 
@@ -77,7 +89,7 @@ public class BlockMovement : MonoBehaviour
 
     private void autoMoveDown()
     {
-        if (Time.time - timeSinceMove >= 1.25)
+        if (Time.time - timeSinceMove >= fallTime)
         {
             transform.position += new Vector3(0, -1, 0);
             if (!ValidMove())
@@ -112,7 +124,7 @@ public class BlockMovement : MonoBehaviour
         }
     }
 
-    bool ValidMove()
+    public bool ValidMove()
     {
         foreach (Transform children in transform)
         {
@@ -169,7 +181,7 @@ public class BlockMovement : MonoBehaviour
         if (transform.hierarchyCount <= 1)
         {
             Destroy(gameObject);
-            Debug.Log("It should have worked??");
+            //Debug.Log("It should have worked??");
         }
     }
     
