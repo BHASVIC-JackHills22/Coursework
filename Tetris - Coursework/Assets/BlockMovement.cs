@@ -7,9 +7,11 @@ public class BlockMovement : MonoBehaviour
 {
     public Vector3 rotationPoint;
     private float timeSinceMove;
-    private float fallTime = 1f;
+    private double fallTime = 1f;    // 1f = 1 second
+    private float level = 1;
+    private float linesRemoved = 0;
 
-    private float keyDelay = 0.1f;  // 1f = 1 second
+    private float keyDelay = 0.1f;  
     private float timePassedLeft = 0f;
     private float timePassedRight = 0f;
     private float timePassedDown = 0f;
@@ -35,6 +37,11 @@ public class BlockMovement : MonoBehaviour
         checkForLines();
         hardDrop();
         removeParent();
+    }
+
+    public void reduceFallTime()
+    {
+        fallTime -= 0.1;
     }
 
     private void moveLeft()
@@ -174,6 +181,9 @@ public class BlockMovement : MonoBehaviour
             grid[x, i] = null;
             //Debug.Log(transform.hierarchyCount);
         }
+        linesRemoved += 1;
+        Debug.Log(linesRemoved);
+        levelIncrease();
     }
 
     private void removeParent()
@@ -199,6 +209,17 @@ public class BlockMovement : MonoBehaviour
                     grid[x, y - 1].transform.position -= new Vector3(0, 1, 0);
                 }
             }
+        }
+    }
+
+    private void levelIncrease()
+    {
+        if (linesRemoved >= 10)
+        {
+            reduceFallTime();
+            level++;
+            linesRemoved = 0;
+            Debug.Log("Level has been incrased");
         }
     }
 }
