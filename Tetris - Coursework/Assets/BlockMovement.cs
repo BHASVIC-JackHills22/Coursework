@@ -152,7 +152,6 @@ public class BlockMovement : MonoBehaviour
             {
                 removeLine(i);
                 rowDown(i);
-                //sort of works here
             }
         }
     }
@@ -176,10 +175,6 @@ public class BlockMovement : MonoBehaviour
             DestroyImmediate(grid[x, i].gameObject);
             grid[x, i] = null;
         }
-        linesRemoved += 2;
-        Debug.Log(linesRemoved);
-        levelIncrease();
-
     }
 
     private void removeParent()
@@ -204,13 +199,16 @@ public class BlockMovement : MonoBehaviour
                     grid[x, y - 1].transform.position -= new Vector3(0, 1, 0);
                 }
             }
-            
         }
+        linesRemoved += 1;
+        FindObjectOfType<LogicScript>().addLines();
+        Debug.Log(linesRemoved);
+        levelIncrease();
     }
 
     private void levelIncrease()
     {
-        if (linesRemoved > 3)
+        if (linesRemoved >= 10)
         {
             level++;
             linesRemoved = 0;
@@ -221,7 +219,10 @@ public class BlockMovement : MonoBehaviour
 
     public void reduceFallTime()
     {
-        fallTime -= 0.1f;
-        Debug.Log(fallTime);
+        if (fallTime > 0.1f)
+        {
+            fallTime -= 0.1f;
+            Debug.Log(fallTime);
+        }
     }
 }
