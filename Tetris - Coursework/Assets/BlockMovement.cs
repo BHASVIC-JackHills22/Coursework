@@ -16,6 +16,8 @@ public class BlockMovement : MonoBehaviour
     private float timePassedRight = 0f;
     private float timePassedDown = 0f;
 
+    
+
     public static int height = 20;
     public static int width = 10;
     private static Transform[,] grid = new Transform[width, height];
@@ -36,7 +38,6 @@ public class BlockMovement : MonoBehaviour
         autoMoveDown();
         checkForLines();
         hardDrop();
-        removeParent();
     }
 
     private void moveLeft()
@@ -176,15 +177,6 @@ public class BlockMovement : MonoBehaviour
             grid[x, i] = null;
         }
     }
-
-    private void removeParent()
-    {
-        if (transform.hierarchyCount <= 1)
-        {
-            Destroy(gameObject);
-            //Debug.Log("It should have worked??");
-        }
-    }
     
     private void rowDown(int i)
     {
@@ -202,8 +194,10 @@ public class BlockMovement : MonoBehaviour
         }
         linesRemoved += 1;
         FindObjectOfType<LogicScript>().addLines();
+        FindObjectOfType<LogicScript>().addScore(500);
         Debug.Log(linesRemoved);
         levelIncrease();
+        FindObjectOfType<RemoveOldBlockScript>().reduceChildren();
     }
 
     private void levelIncrease()
@@ -211,6 +205,7 @@ public class BlockMovement : MonoBehaviour
         if (linesRemoved >= 10)
         {
             level++;
+            FindObjectOfType<LogicScript>().addLevel();
             linesRemoved = 0;
             Debug.Log("Level has been increased");
             reduceFallTime();

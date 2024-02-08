@@ -28,4 +28,9 @@ public class BlockSpawning : MonoBehaviour
             SceneManager.LoadScene(SceneManager.GetActiveScene().name);
         }
     }
+
+    public void Queue()
+    {
+
+    }
 }
