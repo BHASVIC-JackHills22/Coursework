@@ -16,7 +16,8 @@ public class BlockMovement : MonoBehaviour
     private float timePassedRight = 0f;
     private float timePassedDown = 0f;
 
-    
+    private static bool isStored = false;
+    private GameObject[] stored
 
     public static int height = 20;
     public static int width = 10;
@@ -35,6 +36,7 @@ public class BlockMovement : MonoBehaviour
         moveRight();
         moveDown();
         rotation();
+        store();
         autoMoveDown();
         checkForLines();
         hardDrop();
@@ -113,6 +115,26 @@ public class BlockMovement : MonoBehaviour
             transform.RotateAround(transform.TransformPoint(rotationPoint), new Vector3(0, 0, 1), -90);
             if (!ValidMove())
                 transform.RotateAround(transform.TransformPoint(rotationPoint), new Vector3(0, 0, 1), 90);
+        }
+    }
+
+    private void store()
+    {
+        if (Input.GetKeyDown(KeyCode.C) && isStored == false)
+        {
+            isStored = true;
+            gameObject.tag = "currentlyStored";
+            transform.position = new Vector3(20, 15, 0);
+            this.enabled = false;
+            FindObjectOfType<BlockSpawning>().NewTetromino();
+        }
+        else if (Input.GetKeyDown(KeyCode.C) && isStored == false)
+        {
+            Vector3 pos1 = gameObject.transform.position;
+            stored = GameObject.FindGameObjectsWithTag("currentlyStored");
+            stored.transform.position = pos1;
+
+
         }
     }
 
@@ -197,7 +219,7 @@ public class BlockMovement : MonoBehaviour
         FindObjectOfType<LogicScript>().addScore(500);
         Debug.Log(linesRemoved);
         levelIncrease();
-        FindObjectOfType<RemoveOldBlockScript>().reduceChildren();
+        //FindObjectOfType<RemoveOldBlockScript>().reduceChildren();
     }
 
     private void levelIncrease()
