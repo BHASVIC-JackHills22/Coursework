@@ -14,14 +14,14 @@ public class BlockMovement : MonoBehaviour
     private float keyDelay = 0.1f;  
     private float timePassedLeft = 0f;
     private float timePassedRight = 0f;
-    private float timePassedDown = 0f;
+    private float timePassedDown = 0f; 
 
     private static bool isStored = false;
-    private GameObject[] stored
 
     public static int height = 20;
     public static int width = 10;
     private static Transform[,] grid = new Transform[width, height];
+    private static Transform[] storeGrid = new Transform[1];
 
     // Start is called before the first frame update
     void Start()
@@ -124,16 +124,13 @@ public class BlockMovement : MonoBehaviour
         {
             isStored = true;
             gameObject.tag = "currentlyStored";
+            storeGrid[1] = transform;
             transform.position = new Vector3(20, 15, 0);
             this.enabled = false;
             FindObjectOfType<BlockSpawning>().NewTetromino();
         }
         else if (Input.GetKeyDown(KeyCode.C) && isStored == false)
         {
-            Vector3 pos1 = gameObject.transform.position;
-            stored = GameObject.FindGameObjectsWithTag("currentlyStored");
-            stored.transform.position = pos1;
-
 
         }
     }
