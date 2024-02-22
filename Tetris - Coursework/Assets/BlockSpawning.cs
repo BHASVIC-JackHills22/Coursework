@@ -21,8 +21,8 @@ public class BlockSpawning : MonoBehaviour
 
     public void NewTetromino()
     {
-        Instantiate(Tetrominoes[0], transform.position, Quaternion.identity);
-        //Instantiate(Tetrominoes[Random.Range(0,Tetrominoes.Length)], transform.position, Quaternion.identity);
+        //Instantiate(Tetrominoes[0], transform.position, Quaternion.identity);
+        Instantiate(Tetrominoes[Random.Range(0,Tetrominoes.Length)], transform.position, Quaternion.identity);
         if (!FindObjectOfType<BlockMovement>().ValidMove())
         {
             SceneManager.LoadScene(SceneManager.GetActiveScene().name);

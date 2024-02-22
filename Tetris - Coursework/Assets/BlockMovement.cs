@@ -21,7 +21,7 @@ public class BlockMovement : MonoBehaviour
     public static int height = 20;
     public static int width = 10;
     private static Transform[,] grid = new Transform[width, height];
-    private static Transform[] storeGrid = new Transform[1];
+    //private static Transform[] storeGrid = new Transform[2];
 
     // Start is called before the first frame update
     void Start()
@@ -36,7 +36,7 @@ public class BlockMovement : MonoBehaviour
         moveRight();
         moveDown();
         rotation();
-        store();
+        //store();
         autoMoveDown();
         checkForLines();
         hardDrop();
@@ -118,7 +118,7 @@ public class BlockMovement : MonoBehaviour
         }
     }
 
-    private void store()
+    /*private void store()
     {
         if (Input.GetKeyDown(KeyCode.C) && isStored == false)
         {
@@ -131,9 +131,10 @@ public class BlockMovement : MonoBehaviour
         }
         else if (Input.GetKeyDown(KeyCode.C) && isStored == false)
         {
-
+            this.enabled = true; 
+            storeGrid[1].position = new Vector3(4, 18, 0);
         }
-    }
+    }*/
 
     void addToGrid()
     {
