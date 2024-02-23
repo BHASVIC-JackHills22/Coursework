@@ -11,14 +11,12 @@ public class BlockMovement : MonoBehaviour
     private static float level = 1;
     private static float linesRemoved = 0;
 
-    public bool isPaused = false; //might be needed
+    
 
     private float keyDelay = 0.1f;  
     private float timePassedLeft = 0f;
     private float timePassedRight = 0f;
     private float timePassedDown = 0f; 
-
-    private static bool isStored = false;
 
     public static int height = 20;
     public static int width = 10;
@@ -28,7 +26,7 @@ public class BlockMovement : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        //Time.timeScale = 0;
+        
     }
 
     // Update is called once per frame
@@ -38,7 +36,6 @@ public class BlockMovement : MonoBehaviour
         moveRight();
         moveDown();
         rotation();
-        //store();
         autoMoveDown();
         checkForLines();
         hardDrop();
@@ -82,7 +79,7 @@ public class BlockMovement : MonoBehaviour
 
     private void hardDrop()
     {
-        if (Input.GetKeyDown(KeyCode.Space))
+        if (Input.GetKeyDown(KeyCode.Space) && FindObjectOfType<LogicScript>().isPaused == false)
         {
             do
             {

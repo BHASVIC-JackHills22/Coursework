@@ -10,6 +10,7 @@ public class LogicScript : MonoBehaviour
     private int playerLevel;
     private int playerLines;
 
+    public bool isPaused;
     private bool isTimed = false;
 
     public Text scoreText;
@@ -26,6 +27,7 @@ public class LogicScript : MonoBehaviour
     void Start()
     {
         Time.timeScale = 0;
+        isPaused = true;
     }
 
     private void Update()
@@ -55,6 +57,7 @@ public class LogicScript : MonoBehaviour
     {
         StartScreen.SetActive(false);
         Time.timeScale = 1;
+        isPaused = false;
     }
 
     public void startBlitz()
@@ -62,6 +65,7 @@ public class LogicScript : MonoBehaviour
         StartScreen.SetActive(false);
         TimerText.SetActive(true);
         Time.timeScale = 1;
+        isPaused = false;
         isTimed = true;
     }
 
