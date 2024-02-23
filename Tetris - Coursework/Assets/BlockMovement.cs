@@ -11,6 +11,8 @@ public class BlockMovement : MonoBehaviour
     private static float level = 1;
     private static float linesRemoved = 0;
 
+    public bool isPaused = false; //might be needed
+
     private float keyDelay = 0.1f;  
     private float timePassedLeft = 0f;
     private float timePassedRight = 0f;
@@ -26,7 +28,7 @@ public class BlockMovement : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-
+        //Time.timeScale = 0;
     }
 
     // Update is called once per frame

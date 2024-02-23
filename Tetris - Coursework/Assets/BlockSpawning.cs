@@ -6,6 +6,7 @@ using UnityEngine.SceneManagement;
 public class BlockSpawning : MonoBehaviour
 {
     public GameObject[] Tetrominoes;
+    private bool gameOver = false;
 
     // Start is called before the first frame update
     void Start()
@@ -22,10 +23,14 @@ public class BlockSpawning : MonoBehaviour
     public void NewTetromino()
     {
         //Instantiate(Tetrominoes[0], transform.position, Quaternion.identity);
-        Instantiate(Tetrominoes[Random.Range(0,Tetrominoes.Length)], transform.position, Quaternion.identity);
-        if (!FindObjectOfType<BlockMovement>().ValidMove())
+        if (gameOver == false)
         {
-            SceneManager.LoadScene(SceneManager.GetActiveScene().name);
+            Instantiate(Tetrominoes[Random.Range(0, Tetrominoes.Length)], transform.position, Quaternion.identity);
+            if (!FindObjectOfType<BlockMovement>().ValidMove())
+            {
+                FindObjectOfType<LogicScript>().gameOver();
+                gameOver = true;
+            }
         }
     }
 
